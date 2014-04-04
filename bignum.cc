@@ -426,7 +426,7 @@ NAN_METHOD(BigNum::ToString)
   }
 
   Handle<Value> result = NanNew<String>(to);
-  free(to);
+  OPENSSL_free(to);
 
   NanReturnValue(result);
 }
